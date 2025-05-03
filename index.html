@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nubank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script> <!-- Ícones -->
+  <style>
+    :root {
+      --roxo-nubank: #820ad1;
+      --roxo-escuro: #5e0cac;
+      --branco: #ffffff;
+      --cinza-claro: #f4f4f4;
+      --preto: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--preto);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: var(--roxo-nubank);
+      color: var(--branco);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    header img {
+      width: 160px;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: var(--roxo-escuro);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-weight: 500;
+      color: var(--branco);
+    }
+
+    .hero {
+      background-color: var(--branco);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      color: var(--roxo-nubank);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .hero button {
+      background-color: var(--roxo-nubank);
+      color: var(--branco);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: var(--roxo-escuro);
+    }
+
+    .form-container {
+      display: none;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .form-container form {
+      display: inline-block;
+      background: var(--branco);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-container button {
+      background-color: var(--roxo-nubank);
+      color: var(--branco);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #a555e2;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: var(--branco);
+      border-top: 1px solid #e0e0e0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section:nth-child(even) {
+      background-color: var(--cinza-claro);
+    }
+
+    .section h3 {
+      font-size: 1.8rem;
+      color: var(--roxo-nubank);
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background-color: var(--roxo-escuro);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      header h1, .hero h2 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#"><i data-feather="home"></i> Início</a>
+    <a href="#cartao"><i data-feather="credit-card"></i> Cartão de Crédito</a>
+    <a href="#conta"><i data-feather="dollar-sign"></i> Conta Digital</a>
+    <a href="#pj"><i data-feather="briefcase"></i> Conta PJ</a>
+    <a href="#sobre"><i data-feather="info"></i> Sobre</a>
+  </nav>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Nubank_logo_2021.svg" alt="Logo Nubank">
+    <h1>Tenha N possibilidades com o Nubank</h1>
+    <p>Uma nova experiência bancária para você controlar sua vida financeira de forma simples, segura e gratuita.</p>
+  </header>
+
+  <section class="hero">
+    <h2>Abra sua conta gratuita</h2>
+    <p>Em poucos minutos, sem tarifas abusivas e com tudo o que você precisa direto no app.</p>
+    <button onclick="document.querySelector('.form-container').style.display = 'block';">Quero ser Nubank</button>
+
+    <div class="form-container">
+      <form>
+        <input type="text" placeholder="Digite seu CPF" required maxlength="14">
+        <input type="password" placeholder="Digite sua senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="cartao">
+    <h3>Cartão de Crédito</h3>
+    <p>Internacional, sem anuidade, com controle total pelo app e tecnologia contactless.</p>
+  </section>
+
+  <section class="section" id="conta">
+    <h3>Conta Digital</h3>
+    <p>Conta 100% digital com transferências gratuitas, rendimento automático e muito mais.</p>
+  </section>
+
+  <section class="section" id="pj">
+    <h3>Conta PJ</h3>
+    <p>Feita para o seu negócio: simples, eficiente e com tudo que você precisa para empreender.</p>
+  </section>
+
+  <section class="section" id="sobre">
+    <h3>Sobre nós</h3>
+    <p>Desde 2013, reinventamos os serviços financeiros com tecnologia, design e foco total no cliente.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nubank - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('.section');
+    const observerOptions = { threshold: 0.1 };
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    sections.forEach(section => {
+      revealOnScroll.observe(section);
+    });
+
+    // Ícones feather
+    feather.replace();
+  </script>
+
+</body>
+</html>
